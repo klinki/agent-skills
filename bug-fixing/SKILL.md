@@ -15,6 +15,7 @@ Treat the bug workspace as an append-only record:
 - Never remove mentions of prior attempts from `status.md`, `description.md`, or later attempt files just because a newer attempt exists.
 - Never reuse or rename an existing `fix-attempt-XXX.md` file for a different attempt.
 - Correct inaccurate notes by appending a clarification or a newer status entry, not by erasing the historical record.
+- Treat post-attempt user feedback that says the bug is still broken, lists newly noticed symptoms, or reports regressions in the same screen or flow as continuation of the same bug unless the user clearly describes an unrelated issue.
 
 ## Workflow
 
@@ -60,6 +61,7 @@ Additional preservation rules:
 - Consider everything under the bug workspace part of the audit trail for that bug.
 - Do not delete `description.md`, `initial-findings.md`, `status.md`, or any `fix-attempt-*.md` file during normal iteration.
 - If temporary debugging artifacts are worth keeping, store them under the bug workspace and mention them in the current attempt file instead of silently removing them.
+- If a follow-up arrives after a fix attempt and it describes additional symptoms, missing UI, layout regressions, or other still-broken behavior in the same feature area, keep using the existing bug workspace instead of opening a new bug by default.
 
 ## 3. Create Or Update `status.md`
 
@@ -185,8 +187,11 @@ If the user confirms the repair:
 If the user reports the bug is still present:
 
 - Leave the bug open
+- Treat follow-up reports from retesting as the same bug by default when they describe the same feature area, the same user flow, or regressions introduced by the attempted fix
 - Create the next numbered `fix-attempt-XXX.md`
+- Use the new attempt file even if the user reports symptoms that were not written down before, as long as they are part of the same unresolved bug thread
 - Update `status.md` with the failed attempt outcome and the new active attempt
+- Only start a new bug workspace when the user clearly reports a separate unrelated issue
 - Repeat from investigation, using the previous attempt history to refine the next approach
 
 ## Templates
