@@ -1,6 +1,10 @@
 # Fix Attempt XXX
 
+## Attempt Status
+
 ## Goal
+
+## Relation To Previous Attempts
 
 ## Proposed Change
 
@@ -15,5 +19,7 @@
 ## Test Results
 
 ## Outcome
+
+## Next Step
 
 ## Remaining Gaps

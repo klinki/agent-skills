@@ -1,4 +1,4 @@
 interface:
   display_name: "Bug Fixing"
-  short_description: "Documented bug investigation and fix workflow"
-  default_prompt: "Use $bug-fixing to investigate this defect, document findings, and track fix attempts until the user confirms the resolution."
+  short_description: "Append-only bug investigation and fix workflow"
+  default_prompt: "Use $bug-fixing to investigate this defect, preserve the full bug history, and track each fix attempt until the user confirms the resolution."
