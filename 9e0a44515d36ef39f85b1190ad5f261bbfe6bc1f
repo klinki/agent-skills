@@ -1,0 +1,23 @@
+git-workflow/SKILL.md
+  bf17880174fb4bf6 3,42,46,53
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.2.3",
+  "base_commit_sha": "9e0a44515d36ef39f85b1190ad5f261bbfe6bc1f",
+  "prompts": {
+    "bf17880174fb4bf6": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019d4ab2-6e86-7d21-b063-f65a4e865ff6",
+        "model": "gpt-5.4-mini"
+      },
+      "human_author": "David Klingenberg",
+      "messages": [],
+      "total_additions": 58,
+      "total_deletions": 80,
+      "accepted_lines": 28,
+      "overriden_lines": 2
+    }
+  }
+}
