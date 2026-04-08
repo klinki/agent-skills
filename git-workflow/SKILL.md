@@ -22,11 +22,14 @@ All commit messages must adhere to the [Conventional Commits](https://www.conven
 **Format:**
 ```
 <type>(<scope>): <description>
+<type>: <description>
 
 [optional body]
 
 [optional footer]
 ```
+
+`<scope>` is optional. Use it only when it adds clear value.
 
 **Permitted Types:**
 - `feat`: New feature
@@ -42,13 +45,21 @@ All commit messages must adhere to the [Conventional Commits](https://www.conven
 - **Case**: Use an uppercase letter for the first character after the colon.
 - **Punctuation**: Do not end with a period.
 - **Length**: Keep the subject line under 72 characters.
+- **Scope Usage**: Prefer omitting the scope for repo-wide or global changes such as CI, shared tooling, or changes that intentionally span multiple projects without one clear area.
 
 ## 2. Scope Guidelines
 
-- **backend**: Changes to the .NET core logic, repositories, or services.
-- **api**: Changes to controllers, middleware, or Program.cs.
-- **ext**: Changes to the browser extension.
-- **docs**: Changes to project documentation or planning files.
+Scope is optional. Prefer using it only when the change clearly maps to one area.
+
+Prefer omitting the scope for:
+- Global or repo-wide changes such as CI, shared tooling, or workspace configuration
+- Cross-cutting changes that intentionally span multiple projects
+- Commits where a scope would be vague or misleading
+
+Common scopes when a scope is useful:
+- **backend**: Changes to the backend.
+- **api**: Changes to the API.
+- **frontend**: Changes to the frontend.
 
 ## 3. Execution Steps
 
