@@ -1,6 +1,7 @@
 # Bug Status
 
 ## Current State
+- one of: `open`, `investigating`, `in-progress`, `awaiting-user-confirmation`, `fixed`
 
 ## Active Attempt
 
@@ -11,7 +12,6 @@
 ## Resolution Summary
 
 ## Attempt History
-- `fix-attempt-001.md` - created
 
 ## State Change Log
 - YYYY-MM-DD: bug opened

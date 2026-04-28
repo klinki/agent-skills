@@ -161,7 +161,7 @@ Also update `status.md` after each material milestone such as:
 - investigation completed
 - attempt started
 - verification finished
-- awaiting user confirmation
+- awaiting-user-confirmation
 - user confirmed fixed
 - user reported still broken
 
@@ -169,13 +169,17 @@ Never delete or collapse earlier status/history entries while doing these update
 
 ## 8. Ask The User To Confirm
 
-After local verification, ask the user to confirm whether the bug is fixed in their environment or use case.
+After local verification, request explicit user confirmation that the bug is fixed in their environment or use case.
 
-Do not mark the bug as fixed based only on local confidence.
+If the environment provides a user-facing question, task-comment, or follow-up tool, use it to ask for confirmation and keep the task open while waiting for the reply.
+
+Until the user explicitly confirms the fix, keep the bug open and record the state as `awaiting-user-confirmation`.
+
+Do not mark the bug as fixed, close the bug, or finish the task based only on local verification, passing tests, local confidence, or lack of reply.
 
 ## 9. Close Or Continue
 
-If the user confirms the repair:
+If the user explicitly confirms the repair:
 
 - Create or update `status.md`
 - Mark the state as `fixed`
@@ -183,6 +187,13 @@ If the user confirms the repair:
 - Summarize the final resolution
 - Preserve the full attempt history and state-change log
 - Update `description.md` status only if helpful, without removing historical detail from other files
+
+If confirmation has not been received yet:
+
+- Leave the bug open
+- Record the state as `awaiting-user-confirmation`
+- Keep the task or conversation open if the environment supports that workflow
+- Wait for the user's reply before closing the bug or finishing the task
 
 If the user reports the bug is still present:
 
