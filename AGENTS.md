@@ -10,3 +10,4 @@
 - Never push changes.
 - Never perform destructive operations unless explicitly authorized.
 - Apply nearer, project-specific `AGENTS.md` instructions when they conflict with these global defaults.
+- Do not run tests when it is obviously unnecessary, like when you only rename some variable/method.
